@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-#
 # assistant.py
 # Custom Google Home based on the Google Assistant SDK for Python.
 # Use this script as is or modify it to suit your requirements.
@@ -67,7 +65,7 @@ def initialize():
     with open(args.credentials, 'r') as f:
         credentials = google.oauth2.credentials.Credentials(token=None, **json.load(f))
 
-    with Assistant(credentials) as assistant:
+    with Assistant(credentials, "conrad-assistant") as assistant:
         for event in assistant.start():
             process_event(event)
 
