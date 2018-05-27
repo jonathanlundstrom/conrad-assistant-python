@@ -19,7 +19,7 @@ If you wish to have the software running all the time, you can use Supervisor to
     user=pi
     directory=/home/pi
     environment=HOME="/home/pi",USER="pi"
-    command=/home/pi/env/bin/python /home/pi/Applications/ConradAssistant/assistant$
+    command=/home/pi/env/bin/python /home/pi/Applications/ConradAssistant/assistant.py
     autostart=true
     autorestart=true
     stderr_logfile=/var/log/assistant.err.log
