@@ -1,4 +1,4 @@
-#!./env/bin/python
+#!/env/bin/python
 #
 # assistant.py
 # Custom Google Home based on the Google Assistant SDK for Python.
