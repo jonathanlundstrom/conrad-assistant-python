@@ -62,7 +62,7 @@ def process_event(event):
 def initialize():
 
     parser = argparse.ArgumentParser(formatter_class=argparse.RawTextHelpFormatter)
-    parser.add_argument('--credentials', type=existing_file, metavar='OAUTH2_CREDENTIALS_FILE', default=os.path.join(os.path.expanduser('/home/pi/.config'), 'google-oauthlib-tool', 'credentials.json'), help='Path to store and read OAuth2 credentials')
+    parser.add_argument('--credentials', type=existing_file, metavar='OAUTH2_CREDENTIALS_FILE', default=os.path.join(os.path.expanduser('/home/pi/.config'), 'google-assistant', 'credentials.json'), help='Path to store and read OAuth2 credentials')
     args = parser.parse_args()
     with open(args.credentials, 'r') as f:
         credentials = google.oauth2.credentials.Credentials(token=None, **json.load(f))
